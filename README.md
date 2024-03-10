@@ -40,9 +40,7 @@ For Mac, that's as simple as:
 
 `brew install Caskroom/cask/wkhtmltopdf`
 
-(Also install the requirements.txt like a normal python project)
-
 #### Initial Installation 
 * `python3 -m venv .venv`
 * `source .venv/bin/activate`
-* `pip install -r requirements.txt`
+* `pip3 install -r requirements.txt`
