@@ -42,8 +42,7 @@ For Mac, that's as simple as:
 
 (Also install the requirements.txt like a normal python project)
 
-First time 
+#### Initial Installation 
 * `python3 -m venv .venv`
-
-Subsequent times
 * `source .venv/bin/activate`
+* `pip install -r requirements.txt`
