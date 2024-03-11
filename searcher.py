@@ -4,8 +4,7 @@ from printer_file import use_url
 
 # blocked_urls = ["ambitiouskitchen", "tastesbetterfromscratch"]
 
-search_term = "butternut squash soup"
-# input("what kind of soup? \n")
+search_term = input("what recipe ar eyou searching for? \n")
 
 search_list = search_term.split(" ")
 search_string = "+".join(search_list) + "+recipe"
@@ -16,13 +15,11 @@ soup = BeautifulSoup(r.content, 'html.parser')
 
 links = soup.find_all("a")
 
-
 def various_filters(link): 
     the_href = link["href"] 
     if link.parent.name == "span":
         if "https" in the_href and "google" not in the_href:
             return True
-
 
 filtered_links = filter(various_filters, links)
 

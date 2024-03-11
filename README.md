@@ -1,6 +1,6 @@
 # (Beautiful) Soup PDF Scraper for Python
 
-### How to use so far:
+### PDF from URL:
 
 `python3 soup_from.url.py [url]`
 
@@ -8,19 +8,18 @@ i.e.
 
 `python3 soup_from_url.py https://downshiftology.com/recipes/chicken-soup/`
 
-this will create a cleaned up PDF, with a filename based on the `<title>` of the original recipe, and put it in the `./output folder`
+this will create a cleaned up PDF, with a filename based on the `<title>` of the original recipe, and put it in the `./output folder`. unless the website blocks scrapers. 
 
+### search term 
 
 
 ### Todo list for lshapz's reference 
 
 * what if the recipe website is not using the wprm recipe printable software? 
-    * figure out parsing steps for other common recipe webiste utilities
-    * make a different file for those
+    * figure out parsing steps for other common recipe webiste utilities (continue)
     * make a starter file that determines what software the website is using and conditionally uses the relevant function / module / file  
 * what if the recipe website blocks requests/beautiful soup? 
     * exit with an error message?
-    * print a PDF with the URL that says "sorry bub, you gotta actually navigate to there" 
     * is this where Selenium comes in 
 * what if you want a different output folder, say, `~/Documents/recipes`? 
     * make that an optional argument
