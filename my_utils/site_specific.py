@@ -5,6 +5,40 @@ from bs4 import BeautifulSoup
 from my_utils.pdf_maker import pdf_maker
 from my_utils.my_mixins import image_remover, remove_by_class, remove_by_id
 
+# def print_simply(url):
+    
+    # r = requests.get(f"{url}/?print")
+    
+    # soup = BeautifulSoup(r.content, 'html.parser')   
+
+    # title = soup.title.string
+    
+    # # print(soup)
+
+    # pdf_maker(title, soup)
+
+    # driver = selenium.webdriver.Firefox()
+
+    # driver.get(url)
+
+    # title_elem = driver.find_element(By.TAG_NAME, "title")
+
+    # title = title_elem.get_attribute('innerHTML')
+
+    # button_container = driver.find_element(By.CLASS_NAME, 'print-button')
+
+    # button = button_container.find_element(By.TAG_NAME, "button")
+
+    # button.click()
+
+# this is going to need more work because the button click prompts the system print dialog
+
+    # driver.quit()
+
+
+    # print-button
+    # return ""
+
 def print_ersp(url):
     
     r = requests.get(url)

@@ -4,7 +4,8 @@ from printer_file import use_url
 
 # blocked_urls = ["ambitiouskitchen", "tastesbetterfromscratch"]
 
-search_term = input("what recipe ar eyou searching for? \n")
+search_term = input("what recipe are you searching for? \n")
+
 
 search_list = search_term.split(" ")
 search_string = "+".join(search_list) + "+recipe"
@@ -17,16 +18,16 @@ links = soup.find_all("a")
 
 def various_filters(link): 
     the_href = link["href"] 
-    if link.parent.name == "span":
-        if "https" in the_href and "google" not in the_href:
-            return True
+    # if link.parent.name == "span":
+    if "https" in the_href and "google" not in the_href:
+        return True
 
 filtered_links = filter(various_filters, links)
 
 def map_func(input_var): 
     split_list = input_var["href"].split("/url?q=")
     if len(split_list) > 0:
-        # print(split_list)
+        print(split_list)
         return split_list[1].split("&sa")[0]
     else:
         return ""

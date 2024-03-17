@@ -2,7 +2,7 @@ import requests
 import selenium
 from selenium.webdriver.common.by import By
 from bs4 import BeautifulSoup 
-from my_utils.site_specific import print_all, print_wprm, print_itr, print_ersp
+from my_utils.site_specific import print_all, print_wprm, print_itr, print_ersp #, print_simply
 
 
 def use_url(url): 
@@ -19,6 +19,9 @@ def use_url(url):
     if "allrecipes" in url: 
         print(url)
         print_all(url)
+    # elif "simplyrecipes" in url:
+    #     print(url)
+    #     print_simply(url)
     elif wprm_print_links:
         print("WPRM")
         print_wprm(url)
