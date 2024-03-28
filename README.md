@@ -32,7 +32,8 @@ then, when prompted, type the name of the recipe. note that right now, for debug
     * if argument is one url, then just do one url
     * if argument is a .txt file with a list of urls, iterate through that file
     * if no argumemnt, input prompt for a url? or just exit with an error? 
-
+* keeps repeating recipes on search because recipe#title_heading comes up
+    * make a list of urls already processed and skip if its just a variant? 
 
 ## Requirements 
 
