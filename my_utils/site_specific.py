@@ -128,7 +128,13 @@ def print_all(url):
 
     title = title_elem.get_attribute('innerHTML')
 
-    driver.find_element(By.CLASS_NAME, 'mntl-print-button__btn').click()
+    print_button = driver.find_elements(By.CLASS_NAME, 'mntl-print-button__btn')
+    print(print_button)
+    if (print_button != []): 
+        driver.find_element(By.CLASS_NAME, 'mntl-print-button__btn').click()
+    else:
+        print("this is a list not a recipe!")
+        return ""
 
     ingredients = driver.find_element(By.ID, 'mntl-lrs-ingredients_1-0').get_attribute("outerHTML")
 

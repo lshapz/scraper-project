@@ -12,6 +12,9 @@ this will create a cleaned up PDF, with a filename based on the `<title>` of the
 
 ### search term 
 
+`python3 searcher.py`
+
+then, when prompted, type the name of the recipe. note that right now, for debugging reasons, any recipe that cannot be converted to pdf will be saved as HTML for the developer to reference later. 
 
 ### Todo list for lshapz's reference 
 

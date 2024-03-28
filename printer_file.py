@@ -14,7 +14,7 @@ def use_url(url):
     itr_print_links = soup.find_all(attrs={"class": "print-itr"})
     ersp_print_links = soup.find_all(attrs={"class", "ERSPrintBtn"})
     error_divs_cloudflare = soup.find_all(attrs={"class": "cf-error-details"})
-    error_message_scoots = "blocked" in soup.find_all("h1")[0].contents[0]
+    error_message_scoots = len(soup.find_all("h1")) > 1 and  "blocked" in soup.find_all("h1")[0].contents[0]
 
     if "allrecipes" in url: 
         print(url)
